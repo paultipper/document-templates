@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Document Generator Test Job Card</title>
+
+<% 
+const cssSignedUrl = links.cssSignedUrl;
+const resourceUrls = links.resourceUrls;
+const { invoiceDetails, customer, lines, signature } = data;
+%> 
+<link rel="stylesheet" href="<%= cssSignedUrl %>"
+</head>
+<body>
+
+<div class="logo">
+<img src="<%= resourceUrls[0] %>" />
+<h1>Demo Job Card</h1>
+<div>
+</div>
+<h2>Keyloop Document Generator, powered by Prince</h2>
+</div>
+
+
+
+<div class="date">
+Date: <%= U.formatDate(invoiceDetails.invoiceDate) %><br/>
+Invoice number: <%= invoiceDetails.invoiceNumber %><br/>
+Tracking number: <%= invoiceDetails.trackingNumber %><br/>
+</div>
+
+<div class="to">
+<b><%= customer.customerName %></b><br/>
+<%= customer.street %><br/>
+<%= customer.city %><br/>
+<%= customer.postCode %><br/>
+<%= customer.country %><br/>
+</div>
+
+
+
+
+<h1>JOB CARD</h1>
+<!-- Invoice lines table -->
+<table class="invoice">
+  <thead>
+    <tr> <td>Product</td> <td class="num">Units</td> <td class="num">Price per unit</td> <td class="num">Total</td> </tr>
+  </thead>
+  <tr>
+
+<!-- Invoice lines row -->
+</tr>
+<% 
+lines.forEach((line, index) => { 
+  const lineValue = U.roundValue(line.quantity * line.price)
+%>
+  <tr>
+      <td class="produce"><%= line.description %></td>
+      <td class="num"><%= U.formatNumber(line.quantity, 0) %></td>
+      <td class="num"><%= U.formatNumber(line.price) %></td>
+      <td class="num"><%= U.formatNumber(lineValue) %></td>
+  </tr>
+<% 
+}); 
+%> 
+
+</table>
+
+<div class="signature">
+  <b>Customer signature</b>
+  <p/>
+  <img src="<%= signature %>" />
+</div>
+
+<div class="bottom">
+Keyloop Document Generator, powered by Prince
+</div>
+
+</body>
+</html>

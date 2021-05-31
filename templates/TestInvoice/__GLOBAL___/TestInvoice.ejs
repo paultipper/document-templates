@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Document Generator Test Invoice</title>
+
+<% 
+const cssSignedUrl = links.cssSignedUrl;
+const resourceUrls = links.resourceUrls;
+const { invoiceDetails, customer, lines, taxRate, deliveryCharge } = data;
+%> 
+<link rel="stylesheet" href="<%= cssSignedUrl %>"
+</head>
+<body>
+
+<div class="logo">
+<img src="<%= resourceUrls[0] %>" />
+<h1>Demo Invoice</h1>
+<div>
+</div>
+<h2>Keyloop Document Generator, powered by Prince</h2>
+</div>
+
+
+
+<div class="date">
+Date: <%= U.formatDate(invoiceDetails.invoiceDate) %><br/>
+Invoice number: <%= invoiceDetails.invoiceNumber %><br/>
+Tracking number: <%= invoiceDetails.trackingNumber %><br/>
+</div>
+
+<div class="to">
+<b><%= customer.customerName %></b><br/>
+<%= customer.street %><br/>
+<%= customer.city %><br/>
+<%= customer.postCode %><br/>
+<%= customer.country %><br/>
+</div>
+
+
+
+
+<h1>INVOICE</h1>
+<!-- Invoice lines table -->
+<table class="invoice">
+  <thead>
+    <tr> <td>Product</td> <td class="num">Units</td> <td class="num">Price per unit</td> <td class="num">Total</td> </tr>
+  </thead>
+  <tr>
+
+<!-- Invoice lines row -->
+</tr>
+<% 
+let totalQuantity = 0;
+let totalValue = 0;
+lines.forEach((line, index) => { 
+  const lineValue = U.roundValue(line.quantity * line.price)
+%>
+  <tr>
+      <td class="produce"><%= line.description %></td>
+      <td class="num"><%= U.formatNumber(line.quantity, 0) %></td>
+      <td class="num"><%= U.formatNumber(line.price) %></td>
+      <td class="num"><%= U.formatNumber(lineValue) %></td>
+  </tr>
+      
+<% 
+  totalQuantity += line.quantity;
+  totalValue += lineValue;
+}); 
+%> 
+
+<tr>
+
+<tr>
+  <th>Subtotal</th>
+  <td class="num"><%= U.formatNumber(totalQuantity, 0) %></td>
+  <td class="num"> </td>
+  <td class="num"><%= U.formatNumber(totalValue) %></td>
+</tr>
+<tr>
+  <th>Sales tax</th>
+  <td class="num"><%= U.formatNumber(taxRate * 100, 0) + "%" %></td>
+  <td class="num"> </td>
+  <td class="num"><%= U.formatNumber(totalValue * taxRate) %></td>
+</tr>
+<tr><th colspan="3">Shipping</th><td class="num"><%= U.formatNumber(deliveryCharge) %></td></tr>
+<tr><th colspan="3">Total</th><td class="num"><%= U.formatNumber(totalValue + (totalValue * taxRate) + deliveryCharge) %></td></tr>
+
+</table>
+
+<div class="bottom">
+Keyloop Document Generator, powered by Prince
+</div>
+
+</body>
+</html>

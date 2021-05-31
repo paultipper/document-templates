@@ -1,0 +1,628 @@
+{
+	 "$schema": "http://json-schema.org/draft-04/schema#",
+	 "id": "http://example.com/example.json",
+	 "type": "object",
+	 "title": "TestInvoice schema",
+	 "description": "The JSON schema for the TestInvoice template",
+	 "default": {
+	},
+	 "examples": [
+		{
+			 "data": {
+				 "invoiceDetails": {
+					 "invoiceDate": "2021-03-18",
+					 "invoiceNumber": "234937493",
+					 "trackingNumber": "987213987"
+				},
+				 "customer": {
+					 "customerId": "497699",
+					 "customerName": "Daniel Beasley",
+					 "street": "P.O. Box 203, 897 Sagittis Rd.",
+					 "city": "Grezzana",
+					 "postCode": "03663-97198",
+					 "country": "Lilliput"
+				},
+				 "lines": [
+					{
+						 "productId": "4a175d8b-1b20-f31c-f63e-33da5285fd22",
+						 "description": "dolor. Fusce mi",
+						 "quantity": 77,
+						 "price": 67.7,
+						 "value": 5212.9
+					},
+					{
+						 "productId": "273bc6e3-0856-293c-ea88-c0b858265e9c",
+						 "description": "diam. Sed diam",
+						 "quantity": 34,
+						 "price": 90.53,
+						 "value": 3078.02
+					},
+					{
+						 "productId": "ed6a4408-3fce-d6b0-11e2-a45e18aa5f31",
+						 "description": "varius. Nam porttitor",
+						 "quantity": 31,
+						 "price": 88.64,
+						 "value": 2747.84
+					},
+					{
+						 "productId": "af172d42-8114-c089-066b-021469afc543",
+						 "description": "pharetra, felis eget",
+						 "quantity": 61,
+						 "price": 64.27,
+						 "value": 3920.47
+					},
+					{
+						 "productId": "405c98ea-fc8e-edfc-2595-c5da7223a383",
+						 "description": "tempor, est ac",
+						 "quantity": 95,
+						 "price": 84.56,
+						 "value": 8033.2
+					},
+					{
+						 "productId": "770518c7-134a-e3f9-76f2-bb74c4a6bf1d",
+						 "description": "libero dui nec",
+						 "quantity": 71,
+						 "price": 82.3,
+						 "value": 5843.3
+					},
+					{
+						 "productId": "a7073bb6-5025-23df-8794-6d03f6ca197a",
+						 "description": "dolor. Nulla semper",
+						 "quantity": 11,
+						 "price": 10.34,
+						 "value": 113.74
+					},
+					{
+						 "productId": "cc02ae10-9a49-91ce-9e4d-ba7da49831eb",
+						 "description": "et magnis dis",
+						 "quantity": 31,
+						 "price": 52.32,
+						 "value": 1621.92
+					},
+					{
+						 "productId": "7f57afac-cade-c2c7-e5b5-0edf85f11884",
+						 "description": "quis urna. Nunc",
+						 "quantity": 94,
+						 "price": 8.55,
+						 "value": 803.7
+					},
+					{
+						 "productId": "6ea4dc44-3c37-7835-c2d8-188c3f5204d0",
+						 "description": "Quisque tincidunt pede",
+						 "quantity": 83,
+						 "price": 71.79,
+						 "value": 5958.57
+					},
+					{
+						 "productId": "954e1e1f-4227-b6f9-b093-0d157593c5b7",
+						 "description": "placerat. Cras dictum",
+						 "quantity": 52,
+						 "price": 97.12,
+						 "value": 5050.24
+					},
+					{
+						 "productId": "60b97121-593a-1763-8f4a-dc6c39da02f1",
+						 "description": "molestie tellus. Aenean",
+						 "quantity": 60,
+						 "price": 24.37,
+						 "value": 1462.2
+					},
+					{
+						 "productId": "bcce5724-282d-4ad6-8593-9592fc4745f4",
+						 "description": "vulputate velit eu",
+						 "quantity": 16,
+						 "price": 59.35,
+						 "value": 949.6
+					},
+					{
+						 "productId": "d151c041-8dca-5526-c6c3-70d2e477a80a",
+						 "description": "enim. Suspendisse aliquet,",
+						 "quantity": 26,
+						 "price": 21.3,
+						 "value": 553.8
+					},
+					{
+						 "productId": "bf052c24-641e-69ef-5b4a-28e58c6fde47",
+						 "description": "eros. Proin ultrices.",
+						 "quantity": 92,
+						 "price": 83.86,
+						 "value": 7715.12
+					},
+					{
+						 "productId": "6794a971-aab4-6a81-caaf-507a540f03a5",
+						 "description": "ante. Nunc mauris",
+						 "quantity": 75,
+						 "price": 55.98,
+						 "value": 4198.5
+					},
+					{
+						 "productId": "d5463b32-73bc-04c6-2312-3d32c40b24df",
+						 "description": "magna. Sed eu",
+						 "quantity": 54,
+						 "price": 85.22,
+						 "value": 4601.88
+					},
+					{
+						 "productId": "9a79fac0-a97b-b8a6-2773-1dc41d8712dc",
+						 "description": "cursus non, egestas",
+						 "quantity": 85,
+						 "price": 99.89,
+						 "value": 8490.65
+					},
+					{
+						 "productId": "494dc984-9a0e-dd74-2556-7f9420f35abf",
+						 "description": "cursus. Nunc mauris",
+						 "quantity": 36,
+						 "price": 11.09,
+						 "value": 399.24
+					},
+					{
+						 "productId": "9c104e7c-f4bf-0732-3ff1-8e826517cee6",
+						 "description": "nec luctus felis",
+						 "quantity": 18,
+						 "price": 4.83,
+						 "value": 86.94
+					}
+				],
+				 "taxRate": 0.2,
+				 "deliveryCharge": 50
+			}
+		}
+	],
+	 "required": [
+		"data"
+	],
+	 "properties": {
+		 "data": {
+			 "id": "#/properties/data",
+			 "type": "object",
+			 "title": "The data schema",
+			 "description": "The root data object",
+			 "default": {
+			},
+			 "examples": [
+				{
+					 "invoiceDetails": {
+						 "invoiceDate": "2021-03-18",
+						 "invoiceNumber": "234937493",
+						 "trackingNumber": "987213987"
+					},
+					 "customer": {
+						 "customerId": "497699",
+						 "customerName": "Daniel Beasley",
+						 "street": "P.O. Box 203, 897 Sagittis Rd.",
+						 "city": "Grezzana",
+						 "postCode": "03663-97198",
+						 "country": "Lilliput"
+					},
+					 "lines": [
+						{
+							 "productId": "4a175d8b-1b20-f31c-f63e-33da5285fd22",
+							 "description": "dolor. Fusce mi",
+							 "quantity": 77,
+							 "price": 67.7,
+							 "value": 5212.9
+						},
+						{
+							 "productId": "273bc6e3-0856-293c-ea88-c0b858265e9c",
+							 "description": "diam. Sed diam",
+							 "quantity": 34,
+							 "price": 90.53,
+							 "value": 3078.02
+						},
+						{
+							 "productId": "ed6a4408-3fce-d6b0-11e2-a45e18aa5f31",
+							 "description": "varius. Nam porttitor",
+							 "quantity": 31,
+							 "price": 88.64,
+							 "value": 2747.84
+						},
+						{
+							 "productId": "af172d42-8114-c089-066b-021469afc543",
+							 "description": "pharetra, felis eget",
+							 "quantity": 61,
+							 "price": 64.27,
+							 "value": 3920.47
+						},
+						{
+							 "productId": "405c98ea-fc8e-edfc-2595-c5da7223a383",
+							 "description": "tempor, est ac",
+							 "quantity": 95,
+							 "price": 84.56,
+							 "value": 8033.2
+						},
+						{
+							 "productId": "770518c7-134a-e3f9-76f2-bb74c4a6bf1d",
+							 "description": "libero dui nec",
+							 "quantity": 71,
+							 "price": 82.3,
+							 "value": 5843.3
+						},
+						{
+							 "productId": "a7073bb6-5025-23df-8794-6d03f6ca197a",
+							 "description": "dolor. Nulla semper",
+							 "quantity": 11,
+							 "price": 10.34,
+							 "value": 113.74
+						},
+						{
+							 "productId": "cc02ae10-9a49-91ce-9e4d-ba7da49831eb",
+							 "description": "et magnis dis",
+							 "quantity": 31,
+							 "price": 52.32,
+							 "value": 1621.92
+						},
+						{
+							 "productId": "7f57afac-cade-c2c7-e5b5-0edf85f11884",
+							 "description": "quis urna. Nunc",
+							 "quantity": 94,
+							 "price": 8.55,
+							 "value": 803.7
+						},
+						{
+							 "productId": "6ea4dc44-3c37-7835-c2d8-188c3f5204d0",
+							 "description": "Quisque tincidunt pede",
+							 "quantity": 83,
+							 "price": 71.79,
+							 "value": 5958.57
+						},
+						{
+							 "productId": "954e1e1f-4227-b6f9-b093-0d157593c5b7",
+							 "description": "placerat. Cras dictum",
+							 "quantity": 52,
+							 "price": 97.12,
+							 "value": 5050.24
+						},
+						{
+							 "productId": "60b97121-593a-1763-8f4a-dc6c39da02f1",
+							 "description": "molestie tellus. Aenean",
+							 "quantity": 60,
+							 "price": 24.37,
+							 "value": 1462.2
+						},
+						{
+							 "productId": "bcce5724-282d-4ad6-8593-9592fc4745f4",
+							 "description": "vulputate velit eu",
+							 "quantity": 16,
+							 "price": 59.35,
+							 "value": 949.6
+						},
+						{
+							 "productId": "d151c041-8dca-5526-c6c3-70d2e477a80a",
+							 "description": "enim. Suspendisse aliquet,",
+							 "quantity": 26,
+							 "price": 21.3,
+							 "value": 553.8
+						},
+						{
+							 "productId": "bf052c24-641e-69ef-5b4a-28e58c6fde47",
+							 "description": "eros. Proin ultrices.",
+							 "quantity": 92,
+							 "price": 83.86,
+							 "value": 7715.12
+						},
+						{
+							 "productId": "6794a971-aab4-6a81-caaf-507a540f03a5",
+							 "description": "ante. Nunc mauris",
+							 "quantity": 75,
+							 "price": 55.98,
+							 "value": 4198.5
+						},
+						{
+							 "productId": "d5463b32-73bc-04c6-2312-3d32c40b24df",
+							 "description": "magna. Sed eu",
+							 "quantity": 54,
+							 "price": 85.22,
+							 "value": 4601.88
+						},
+						{
+							 "productId": "9a79fac0-a97b-b8a6-2773-1dc41d8712dc",
+							 "description": "cursus non, egestas",
+							 "quantity": 85,
+							 "price": 99.89,
+							 "value": 8490.65
+						},
+						{
+							 "productId": "494dc984-9a0e-dd74-2556-7f9420f35abf",
+							 "description": "cursus. Nunc mauris",
+							 "quantity": 36,
+							 "price": 11.09,
+							 "value": 399.24
+						},
+						{
+							 "productId": "9c104e7c-f4bf-0732-3ff1-8e826517cee6",
+							 "description": "nec luctus felis",
+							 "quantity": 18,
+							 "price": 4.83,
+							 "value": 86.94
+						}
+					],
+					 "taxRate": 0.2,
+					 "deliveryCharge": 50
+				}
+			],
+			 "required": [
+				"invoiceDetails",
+				"customer",
+				"lines",
+				"taxRate",
+				"deliveryCharge"
+			],
+			 "properties": {
+				 "invoiceDetails": {
+					 "id": "#/properties/data/properties/invoiceDetails",
+					 "type": "object",
+					 "title": "Invoice details",
+					 "description": "Invoice identifiers and other header details",
+					 "default": {
+					},
+					 "examples": [
+						{
+							 "invoiceDate": "2021-03-18",
+							 "invoiceNumber": "234937493",
+							 "trackingNumber": "987213987"
+						}
+					],
+					 "required": [
+						"invoiceDate",
+						"invoiceNumber",
+						"trackingNumber"
+					],
+					 "properties": {
+						 "invoiceDate": {
+							 "id": "#/properties/data/properties/invoiceDetails/properties/invoiceDate",
+							 "type": "string",
+							 "title": "Invoice date",
+							 "description": "The invoice date",
+							 "default": "",
+							 "examples": [
+								"2021-03-18"
+							]
+						},
+						 "invoiceNumber": {
+							 "id": "#/properties/data/properties/invoiceDetails/properties/invoiceNumber",
+							 "type": "string",
+							 "title": "Invoice number",
+							 "description": "The invoice number.",
+							 "default": "",
+							 "examples": [
+								"234937493"
+							]
+						},
+						 "trackingNumber": {
+							 "id": "#/properties/data/properties/invoiceDetails/properties/trackingNumber",
+							 "type": "string",
+							 "title": "Tracking number",
+							 "description": "The tracking number used to track the delivery of the goods on the invoice.",
+							 "default": "",
+							 "examples": [
+								"987213987"
+							]
+						}
+					},
+					 "additionalProperties": true
+				},
+				 "customer": {
+					 "id": "#/properties/data/properties/customer",
+					 "type": "object",
+					 "title": "Customer object",
+					 "description": "Customer information",
+					 "default": {
+					},
+					 "examples": [
+						{
+							 "customerId": "497699",
+							 "customerName": "Daniel Beasley",
+							 "street": "P.O. Box 203, 897 Sagittis Rd.",
+							 "city": "Grezzana",
+							 "postCode": "03663-97198",
+							 "country": "Lilliput"
+						}
+					],
+					 "required": [
+						"customerId",
+						"customerName",
+						"street",
+						"city",
+						"postCode",
+						"country"
+					],
+					 "properties": {
+						 "customerId": {
+							 "id": "#/properties/data/properties/customer/properties/customerId",
+							 "type": "string",
+							 "title": "Customer id",
+							 "description": "The customer id",
+							 "default": "",
+							 "examples": [
+								"497699"
+							]
+						},
+						 "customerName": {
+							 "id": "#/properties/data/properties/customer/properties/customerName",
+							 "type": "string",
+							 "title": "Customer name",
+							 "description": "Customer name",
+							 "default": "",
+							 "examples": [
+								"Daniel Beasley"
+							]
+						},
+						 "street": {
+							 "id": "#/properties/data/properties/customer/properties/street",
+							 "type": "string",
+							 "title": "The street schema",
+							 "description": "An explanation about the purpose of this instance.",
+							 "default": "",
+							 "examples": [
+								"P.O. Box 203, 897 Sagittis Rd."
+							]
+						},
+						 "city": {
+							 "id": "#/properties/data/properties/customer/properties/city",
+							 "type": "string",
+							 "title": "The city schema",
+							 "description": "An explanation about the purpose of this instance.",
+							 "default": "",
+							 "examples": [
+								"Grezzana"
+							]
+						},
+						 "postCode": {
+							 "id": "#/properties/data/properties/customer/properties/postCode",
+							 "type": "string",
+							 "title": "The postCode schema",
+							 "description": "An explanation about the purpose of this instance.",
+							 "default": "",
+							 "examples": [
+								"03663-97198"
+							]
+						},
+						 "country": {
+							 "id": "#/properties/data/properties/customer/properties/country",
+							 "type": "string",
+							 "title": "The country schema",
+							 "description": "An explanation about the purpose of this instance.",
+							 "default": "",
+							 "examples": [
+								"Lilliput"
+							]
+						}
+					},
+					 "additionalProperties": true
+				},
+				 "lines": {
+					 "id": "#/properties/data/properties/lines",
+					 "type": "array",
+					 "title": "The lines schema",
+					 "description": "An explanation about the purpose of this instance.",
+					 "default": [
+					],
+					 "examples": [
+						[
+							{
+								 "productId": "4a175d8b-1b20-f31c-f63e-33da5285fd22",
+								 "description": "dolor. Fusce mi",
+								 "quantity": 77,
+								 "price": 67.7,
+								 "value": 5212.9
+							},
+							{
+								 "productId": "273bc6e3-0856-293c-ea88-c0b858265e9c",
+								 "description": "diam. Sed diam",
+								 "quantity": 34,
+								 "price": 90.53,
+								 "value": 3078.02
+							}
+						]
+					],
+					 "additionalItems": true,
+					 "items": {
+						 "id": "#/properties/data/properties/lines/items",
+						 "anyOf": [
+							{
+								 "id": "#/properties/data/properties/lines/items/anyOf/0",
+								 "type": "object",
+								 "title": "The first anyOf schema",
+								 "description": "An explanation about the purpose of this instance.",
+								 "default": {
+								},
+								 "examples": [
+									{
+										 "productId": "4a175d8b-1b20-f31c-f63e-33da5285fd22",
+										 "description": "dolor. Fusce mi",
+										 "quantity": 77,
+										 "price": 67.7,
+										 "value": 5212.9
+									}
+								],
+								 "required": [
+									"productId",
+									"description",
+									"quantity",
+									"price",
+									"value"
+								],
+								 "properties": {
+									 "productId": {
+										 "id": "#/properties/data/properties/lines/items/anyOf/0/properties/productId",
+										 "type": "string",
+										 "title": "The productId schema",
+										 "description": "An explanation about the purpose of this instance.",
+										 "default": "",
+										 "examples": [
+											"4a175d8b-1b20-f31c-f63e-33da5285fd22"
+										]
+									},
+									 "description": {
+										 "id": "#/properties/data/properties/lines/items/anyOf/0/properties/description",
+										 "type": "string",
+										 "title": "The description schema",
+										 "description": "An explanation about the purpose of this instance.",
+										 "default": "",
+										 "examples": [
+											"dolor. Fusce mi"
+										]
+									},
+									 "quantity": {
+										 "id": "#/properties/data/properties/lines/items/anyOf/0/properties/quantity",
+										 "type": "integer",
+										 "title": "The quantity schema",
+										 "description": "An explanation about the purpose of this instance.",
+										 "default": 0,
+										 "examples": [
+											77
+										]
+									},
+									 "price": {
+										 "id": "#/properties/data/properties/lines/items/anyOf/0/properties/price",
+										 "type": "number",
+										 "title": "The price schema",
+										 "description": "An explanation about the purpose of this instance.",
+										 "default": 0.0,
+										 "examples": [
+											67.7
+										]
+									},
+									 "value": {
+										 "id": "#/properties/data/properties/lines/items/anyOf/0/properties/value",
+										 "type": "number",
+										 "title": "The value schema",
+										 "description": "An explanation about the purpose of this instance.",
+										 "default": 0.0,
+										 "examples": [
+											5212.9
+										]
+									}
+								},
+								 "additionalProperties": true
+							}
+						]
+					}
+				},
+				 "taxRate": {
+					 "id": "#/properties/data/properties/taxRate",
+					 "type": "number",
+					 "title": "The taxRate schema",
+					 "description": "An explanation about the purpose of this instance.",
+					 "default": 0.0,
+					 "examples": [
+						0.2
+					]
+				},
+				 "deliveryCharge": {
+					 "id": "#/properties/data/properties/deliveryCharge",
+					 "type": "integer",
+					 "title": "The deliveryCharge schema",
+					 "description": "An explanation about the purpose of this instance.",
+					 "default": 0,
+					 "examples": [
+						50
+					]
+				}
+			},
+			 "additionalProperties": true
+		}
+	},
+	 "additionalProperties": true
+}

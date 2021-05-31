@@ -1,0 +1,97 @@
+@page {
+    size: a4;
+    margin: 20mm;
+    @top { content: string(doctitle) }
+    @bottom {
+      content: "Page " counter(page) " of " counter(pages);
+    }
+  }
+  
+  @media screen {
+    body { margin: 2em }
+    .bottom { margin-top: 5em }
+  }
+
+  body {
+    font: 11pt "IBM Plex Sans", sans-serif;
+  }
+  
+  .logo {
+    margin: 0 auto;
+    padding: 0 0 4em;
+  }
+  
+  .logo h1 { 
+    text-transform: uppercase;
+    text-align: center;
+    font: 24pt "IBM Plex Sans", sans-serif;
+    margin: 0; 
+    padding: 0;
+    letter-spacing: 0.5em;
+  }
+  
+  .logo h2 {
+    text-align: center;
+    font: bold 14pt "IBM Plex Sans", sans-serif;
+    margin: 0; padding: 0.3em;
+    color: darkslateblue;
+  }
+  
+  .logo div {
+      text-align: center;
+  }
+  
+  .logo img {
+     height: 5em;
+     margin: 0.5em 3em;
+  }
+  
+  
+  h1 {
+    text-align: center;
+    margin-top: 5em;
+    font-size: 1.4em;
+  }
+
+  h2 {
+    string-set: doctitle content()
+  }
+  
+  table.invoice {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  table.invoice td, table.invoice th {
+    padding: 5px;
+    border: thin solid silver;
+  }
+
+  table.invoice thead {
+    font-weight: bold;
+  }
+  
+  table.invoice .produce {
+      text-indent: 2em;
+  }
+  
+  div.to {
+  }
+  
+  div.date {
+    float: right;
+    text-align: right;
+  }
+  
+  
+  div.bottom {
+    font: 14pt "IBM Plex Sans", sans-serif;
+    text-align: center;
+    color: darkslateblue;
+    float: bottom;
+    width: 100%;
+  }
+  
+  td, th { text-align: left }
+  .num { text-align: right }
+  
+  

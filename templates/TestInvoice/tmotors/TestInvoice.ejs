@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Document Generator Test Invoice</title>
+
+<!--
+NOTE:
+
+This application uses almost exactly the same HTML to generate both the PDF
+and HTML invoices.  The only difference is the paths written in the "img"
+tags.  Prince is given absolute paths to local filesystem files and the web
+browser is given links to files on the same webserver.
+
+For Prince: /var/www/samples/fruitstand
+For Web: /samples/fruitstand
+-->
+<%  
+const cssSignedUrl = links.cssSignedUrl;
+const resourceUrls = links.resourceUrls;
+const { invoiceDetails, customer, lines, taxRate, deliveryCharge } = data;
+%> 
+<link rel="stylesheet" href="<%= cssSignedUrl %>"
+</head>
+<body>
+
+<div class="logo">
+<img src="<%= resourceUrls[0] %>" />
+<h1>Demo Invoice</h1>
+<div>
+</div>
+<h2>Keyloop Document Generator, powered by Prince</h2>
+</div>
+
+
+
+<div class="date">
+Date: <%= invoiceDetails.invoiceDate %><br/>
+Invoice number: <%= invoiceDetails.invoiceNumber %><br/>
+Tracking number: <%= invoiceDetails.trackingNumber %><br/>
+</div>
+
+<div class="to">
+<b><%= customer.customerName %></b><br/>
+<%= customer.street %><br/>
+<%= customer.city %><br/>
+<%= customer.postCode %><br/>
+<%= customer.country %><br/>
+</div>
+
+
+
+
+<h1>INVOICE</h1>
+
+<table class="invoice">
+<tr>
+<th>Product</th><th class="num">Units</th><th class="num">Price per unit</th><th class="num">Total</th>
+</tr>
+<% 
+let totalQuantity = 0;
+let totalValue = 0;
+lines.forEach((line, index) => { %>
+  <tr>
+      <td class="produce"><%= line.description %></td>
+      <td class="num"><%= line.quantity %></td>
+      <td class="num"><%= line.price %></td>
+      <td class="num"><%= line.value %></td>
+  </tr>
+      
+<% 
+  totalQuantity += line.quantity
+  totalValue += line.value
+}); 
+%> 
+
+<tr>
+<tr><th colspan="3">Subtotal</th><td class="num"><%= totalQuantity %></td></tr>
+<tr><th colspan="3">Sales tax</th><td class="num"><%= totalValue * taxRate %></td></tr>
+<tr><th colspan="3">Shipping</th><td class="num"><%= deliveryCharge %></td></tr>
+<tr><th colspan="3">Total</th><td class="num"><%= totalValue + (totalValue * taxRate) + deliveryCharge %></td></tr>
+
+</table>
+
+<div class="bottom">
+Keyloop Document Generator, powered by Prince
+</div>
+
+</body>
+</html>
